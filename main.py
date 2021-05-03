@@ -5,10 +5,11 @@ import Teacher.teacher_login as teacher
 
 users = ["student", "teacher"]
 entry_options = ["login", "register"]
+isUserLoggedOut = True
 
 def openMenu():
 
-    while True:
+    while isUserLoggedOut:
         u.clearScreen()
         print("1. Student")
         print("2. Teacher")
@@ -29,14 +30,14 @@ def login(user_type):
     ## for student
     if user_type == users[0]:
         print("------ Login As A Student ------")
-        std_id = int(input("Enter Your Student ID"))
-        std_password = input("Enter Your Student Password")
+        std_id = int(input("Enter Your Student ID : "))
+        std_password = input("Enter Your Student Password : ")
 
     ## for teacher
     elif user_type == users[1]:
         print("------ Login As A Teacher ------")
-        teach_id = int(input("Enter Your Instructor ID"))
-        teach_password = input("Enter Your Instructor Password")
+        teach_id = input("Enter Your Instructor ID : ")
+        teach_password = input("Enter Your Instructor Password : ")
         teacher.verifyDetails(teach_id, teach_password)
 
 
