@@ -7,6 +7,7 @@ users = ["student", "teacher"]
 entry_options = ["login", "register"]
 isUserLoggedOut = True
 
+
 def openMenu():
 
     while isUserLoggedOut:
